@@ -1,0 +1,49 @@
+# -------------------------------------Dataset------------------------------------------------
+dataset_format: ICL
+dataset_dir: "../dataset/ICL/traj2/"
+output_dir: "../output/ICL/traj2/"
+start_frame: 0
+end_frame: 300
+frame_step: 1
+factor: 1
+is_flip: false
+
+# ------------------------------ Output Setting -------------------------------
+log_slam_pose: true
+log_gt_pose: true
+draw_pcd: true
+# -------------------------------Kinect Fusion Parameters-----------------------------------
+# note: big threshold may influence the result of pose and recon, recommend smaller than 2 x voxel size
+biInterpolate_threshold: 0.00
+trunc_logistic_k: 0
+flag_use_gtPose: false
+
+# tsdf volume
+tsdf_size_x: 256
+tsdf_size_y: 256
+tsdf_size_z: 256
+tsdf_voxel_size: 0.03
+max_integration_weight: 100
+thres_range: 3
+# init camera pos
+init_x: 3.2
+init_y: 3.2
+init_z: 3.2
+r_x: 0
+r_y: 0
+r_z: 0
+# camera
+depth_width: 640
+depth_height: 480
+fx: 481.20
+fy: -480.00
+cx: 319.50
+cy: 239.50
+
+# ICP
+num_levels: 3
+distThres: 0.10
+angleThres: 15
+
+
+
